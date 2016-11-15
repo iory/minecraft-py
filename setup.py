@@ -28,10 +28,12 @@ class BuildMalmo(build):
         bits, linkage = platform.architecture()
         if system == 'Linux':
             dist, version, vername = platform.linux_distribution()
-            folder = 'Malmo-0.18.0-{}-{}-{}-{}'.format(system, dist, version, bits)
+            # folder = 'Malmo-0.18.0-{}-{}-{}-{}'.format(system, dist, version, bits)
+            folder = 'Malmo-0.18.0-Linux-Ubuntu-14.04-64bit'
         else:
             folder = 'Malmo-0.18.0-{}-{}'.format(system, bits)
-        url = 'https://github.com/Microsoft/malmo/releases/download/0.18.0/{}.zip'.format(folder)
+        # url = 'https://github.com/Microsoft/malmo/releases/download/0.18.0/{}.zip'.format(folder)
+        url = 'https://github.com/Microsoft/malmo/releases/download/0.18.0/Malmo-0.18.0-Linux-Ubuntu-14.04-64bit.zip'
 
         print("Downloading Malmo...")
         urlretrieve(url, 'Malmo.zip')
